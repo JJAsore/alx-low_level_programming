@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main-program entry point
+* main-program entry point
  * Return: 0 no erro, non zerror if error
  */
 int main(void)
@@ -16,7 +16,7 @@ break;
 else
 {
 putchar(',');
-putchar('');
+putchar(',');
 }
 }
 putchar('\n');
