@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- *main-prints ALX as a message.
+ * main-prints Holbertson as a message.
  *
- *Return: Always 0 (success)
+ * Return:Always 0 (success)
  */
 int main(void)
 {
