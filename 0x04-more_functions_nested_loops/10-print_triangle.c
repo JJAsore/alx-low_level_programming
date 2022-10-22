@@ -18,6 +18,6 @@ if (h == n)
 continue;
 _putchar('\n');
 }
-o}
+}
 _putchar('\n');
 }
