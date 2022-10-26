@@ -1,2 +1,1 @@
-#!/bin/bash
-c coding
+pointers_arrays_strings
