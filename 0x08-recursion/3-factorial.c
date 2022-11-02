@@ -3,7 +3,7 @@
  * factorial-Returns the factorial of a given number.
  * @n: the number to find the factorial of.
  * Return: if n > 0 - the factorial of n
- * if n < 0 -1 to indicate error.
+ * if n < 0 - 1 to indicate error.
  */
 int factorial(int n)
 {
