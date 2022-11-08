@@ -4,7 +4,7 @@
  * str_concat - concatenates two string
  * @s1:string to concatenate
  * @s2:other string to concatenate
- * Return:pointer to the new thestring created (success), or NULL(error)
+ * Return:pointer to the new the string created (success), or NULL(error)
  */
 char *str_concat(char *s1, char *s2)
 {
@@ -29,9 +29,9 @@ i++;
 }
 if (s2)
 {
-while (i, (len1 + len2))
+while (i < (len1 + len2))
 {
-s3[i] = s2[i];
+s3[i] = s2[j];
 i++;
 j++;
 }
