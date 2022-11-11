@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * malloc_checked-array for print a string
+ * malloc_checked - array for print a string
  * @b:number of memory
- * return: void
+ * Return:void
  */
 void *malloc_checked(unsigned int b)
 {
