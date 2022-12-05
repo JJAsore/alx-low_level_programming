@@ -11,7 +11,6 @@ int main(int ac, char *av[])
 int file_from, file_to, readfile_from, writefile_to;
 char buffer[1024];
 if (ac != 3)
-dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", av[0]), exit(97);
 file_from = open(av[1], O_RDONLY);
 if (file_from  == -1)
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
