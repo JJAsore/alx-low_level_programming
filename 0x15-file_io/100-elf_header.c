@@ -36,10 +36,10 @@ exit(98);
 }
 }
 /**
-prints_magic - Prints the magic numbers of an ELF header.
-* @e_ident: A pointer to an array containing the ELF magic numbers.
- *Description: Magic numbers are separated by space
- */
+*print_magic - Prints the magic numbers of an ELF header.
+*@e_ident: A pointer to an array containing the ELF magic numbers.
+*Description: Magic numbers are separated by space
+*/
 void print_magic(unsigned char *e_ident)
 {
 int index;
@@ -162,6 +162,16 @@ printf("<unknown: %x>\n", e_ident[EI_OSABI]);
  *  print_abi - Prints the ABI version of an ELF header.
  *@e_ident: A pointer to an array containing the ELF ABI version.
  */
+void print_abi(unsigned char *e_ident)
+{
+printf("  ABI Version:                       %d\n",
+e_ident[EI_ABIVERSION]);
+}
+/**
+ * print_type - Prints the type of an ELF header.
+ *@e_type: The ELF type.
+ *@e_ident: A pointer to an array containing the ELF class.
+ */
 void print_type(unsigned int e_type, unsigned char *e_ident)
 {
 if (e_ident[EI_DATA] == ELFDATA2MSB)
@@ -246,6 +256,14 @@ if (header == NULL)
 free(header);
 close_elf(o);
 dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
+exit(98);
+}
+r = read(o, header, sizeof(Elf64_Ehdr));
+if (r == -1)
+{
+free(header);
+close_elf(o);
+dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 exit(98);
 }
 check_elf(header->e_ident);
