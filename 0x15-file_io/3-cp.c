@@ -43,7 +43,8 @@ dprintf(STDERR_FILENO, "Can't close fd %s\n", av[1]), exit(100);
 }
 file_to = close(file_to);
 if (file_to < 0)
-dprintf(STDERR_FILENO, "Can't close fd %s\n", av[2]), exit(100);
+dprintf(STDERR_FILENO, "Can't close fd %s\n", av[2]),
+exit(100);
 return (0);
 }
 
